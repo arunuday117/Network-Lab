@@ -1,0 +1,66 @@
+﻿ARK | Compare Intel® Products
+03/15/2022 02:35:20 PM
+,Intel® Desktop Board D945GCPE ()
+
+Essentials
+Product Collection,Legacy Intel® Desktop Boards
+Code Name,Products formerly Plum Creek
+Status,Discontinued
+Launch Date,Q3'07
+Board Form Factor,microATX
+Socket,LGA775
+Board Chipset,Intel® 82945GC Graphics and Memory Controller
+Intel vPro® Platform Eligibility ‡,No
+
+Supplemental Information
+Datasheet,View now
+
+Memory & Storage
+Max Memory Size (dependent on memory type),2 GB
+Memory Types,DDR2 533/667
+Max # of Memory Channels,2
+Max # of DIMMs,2
+ECC Memory Supported   ‡,No
+
+Processor Graphics
+Integrated Graphics ‡,Yes
+Graphics Output,VGA
+Discrete Graphics,N/A
+
+Expansion Options
+PCI Support,2
+PCIe x1 Gen 2.x,0
+PCIe x4 Gen 2.x,0
+PCIe x8 Gen 2.x,0
+PCIe x16 Gen 2.x,0
+
+I/O Specifications
+USB 2.0 Configuration (External + Internal),4+4
+Total # of SATA Ports,2
+# of eSATA Ports,0
+RAID Configuration,N/A
+# of PATA Ports,1
+# of Parallel Ports,0
+# of Serial Ports,0
+Audio (back channel + front channel),6-ch
+Integrated LAN,10/100/1000
+Firewire,0+0
+
+Package Specifications
+Max CPU Configuration,1
+
+Advanced Technologies
+Intel® Virtualization Technology for Directed I/O (VT-d) ‡,No
+Intel vPro® Platform Eligibility ‡,No
+Intel® ME Firmware Version,N/A
+Intel® Remote Wake Technology,No
+Intel® Remote PC Assist Technology,No
+Intel® CIRA Technology,No
+TPM,No
+Intel® Quiet System Technology,No
+Intel® HD Audio Technology,Yes
+Intel® Matrix Storage Technology,No
+
+Security & Reliability
+Intel® Trusted Execution Technology ‡,No
+Anti-Theft Technology,No

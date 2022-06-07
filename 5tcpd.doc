@@ -1,0 +1,126 @@
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ tcpdump --version
+tcpdump version 4.9.3
+libpcap version 1.7.4
+OpenSSL 1.0.2g  1 Mar 2016
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo tcpdump -D
+[sudo] password for mca38: 
+1.enp2s0 [Up, Running]
+2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+3.lo [Up, Running, Loopback]
+4.bluetooth0 (Bluetooth adapter number 0)
+5.nflog (Linux netfilter log (NFLOG) interface)
+6.nfqueue (Linux netfilter queue (NFQUEUE) interface)
+7.usbmon1 (USB bus number 1)
+8.usbmon2 (USB bus number 2)
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo tcpdump -i lo
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on lo, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C
+0 packets captured
+0 packets received by filter
+0 packets dropped by kernel
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo tcpdump -i any
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked), capture size 262144 bytes
+21:27:53.266191 Null Unnumbered, xid, Flags [Response], length 46: 01 00
+21:27:53.316098 Null Unnumbered, xid, Flags [Response], length 46: 01 00
+21:27:53.355553 ARP, Request who-has 192.168.1.1 tell 192.168.1.233, length 46
+21:27:53.356542 IP localhost.58496 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 844+ PTR? 1.1.168.192.in-addr.arpa. (42)
+21:27:53.356698 IP 172.20.33.184.44070 > dns.google.domain: 24658+ PTR? 1.1.168.192.in-addr.arpa. (42)
+21:27:53.376133 IP dns.google.domain > 172.20.33.184.44070: 24658 NXDomain 0/0/0 (42)
+21:27:53.376283 IP mca38-HP-Pavilion-Desktop-590-p0xxx.domain > localhost.58496: 844 NXDomain 0/0/0 (42)
+21:27:53.393085 IP localhost.39937 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 5111+ PTR? 4.4.8.8.in-addr.arpa. (38)
+21:27:53.393219 IP 172.20.33.184.44070 > dns.google.domain: 47006+ PTR? 4.4.8.8.in-addr.arpa. (38)
+21:27:53.496026 IP 172.20.30.72.17500 > 255.255.255.255.17500: UDP, length 134
+21:27:53.496312 IP localhost.45848 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 55870+ PTR? 255.255.255.255.in-addr.arpa. (46)
+21:27:53.496459 IP 172.20.33.184.44070 > dns.google.domain: 64186+ PTR? 255.255.255.255.in-addr.arpa. (46)
+21:27:53.500413 IP 172.20.30.72.17500 > 255.255.255.255.17500: UDP, length 134
+21:27:53.500449 IP 172.20.30.72.17500 > 172.20.255.255.17500: UDP, length 134
+21:27:53.500460 IP 172.20.30.72.17500 > 255.255.255.255.17500: UDP, length 134
+21:27:53.557236 IP localhost.58134 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 55397+ PTR? 255.255.20.172.in-addr.arpa. (45)
+21:27:53.557368 IP 172.20.33.184.44070 > dns.google.domain: 29523+ PTR? 255.255.20.172.in-addr.arpa. (45)
+21:27:53.571709 IP dns.google.domain > 172.20.33.184.44070: 29523 NXDomain 0/0/0 (45)
+21:27:53.582032 IP 172.20.30.96.59013 > 255.255.255.255.10007: UDP, length 128
+21:27:53.582336 IP localhost.54483 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 9168+ PTR? 96.30.20.172.in-addr.arpa. (43)
+21:27:53.582478 IP 172.20.33.184.44070 > dns.google.domain: 54983+ PTR? 96.30.20.172.in-addr.arpa. (43)
+21:27:53.596966 IP dns.google.domain > 172.20.33.184.44070: 54983 NXDomain 0/0/0 (43)
+21:27:53.597111 IP mca38-HP-Pavilion-Desktop-590-p0xxx.domain > localhost.54483: 9168 NXDomain 0/0/0 (43)
+21:27:53.712662 Null Unnumbered, xid, Flags [Response], length 46: 01 00
+21:27:53.712876 ARP, Request who-has 172.20.33.132 tell 172.20.31.28, length 46
+21:27:53.713100 IP localhost.52645 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 46297+ PTR? 132.33.20.172.in-addr.arpa. (44)
+21:27:53.713246 IP 172.20.33.184.44070 > dns.google.domain: 30722+ PTR? 132.33.20.172.in-addr.arpa. (44)
+21:27:53.727604 IP dns.google.domain > 172.20.33.184.44070: 30722 NXDomain 0/0/0 (44)
+21:27:53.727717 IP mca38-HP-Pavilion-Desktop-590-p0xxx.domain > localhost.52645: 46297 NXDomain 0/0/0 (44)
+^C
+29 packets captured
+74 packets received by filter
+35 packets dropped by kernel
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo tcpdump -c 5 -i any
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked), capture size 262144 bytes
+21:28:35.821273 ARP, Request who-has 172.20.6.1 tell 172.20.33.31, length 46
+21:28:35.822300 IP localhost.36586 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 49259+ PTR? 1.6.20.172.in-addr.arpa. (41)
+21:28:35.822440 IP 172.20.33.184.44070 > dns.google.domain: 3654+ PTR? 1.6.20.172.in-addr.arpa. (41)
+21:28:35.822460 IP 172.20.33.184.44070 > b.resolvers.Level3.net.domain: 3654+ PTR? 1.6.20.172.in-addr.arpa. (41)
+21:28:35.822471 IP 172.20.33.184.44070 > 192.168.1.1.domain: 3654+ PTR? 1.6.20.172.in-addr.arpa. (41)
+5 packets captured
+41 packets received by filter
+29 packets dropped by kernel
+
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo tcpdump -XX -c 5 -i any
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked), capture size 262144 bytes
+21:29:26.419105 IP 172.20.30.96.62486 > 255.255.255.255.10019: UDP, length 128
+	0x0000:  0001 0001 0006 c018 85c6 d053 0000 0800  ...........S....
+	0x0010:  4500 009c 34ea 0000 8011 3af3 ac14 1e60  E...4.....:....`
+	0x0020:  ffff ffff f416 2723 0088 ed75 f0ff 0000  ......'#...u....
+	0x0030:  1200 0000 0000 0000 0000 0000 6330 2d31  ............c0-1
+	0x0040:  382d 3835 2d63 362d 6430 2d35 3300 0000  8-85-c6-d0-53...
+	0x0050:  0000 0000 0000 0000 0000 0000 0000 0000  ................
+	0x0060:  0000 0000 0000 0000 0000 0000 0000 0000  ................
+	0x0070:  0000 0000 0000 0000 0000 0000 0000 0000  ................
+	0x0080:  0000 0000 0000 0000 0000 0000 0000 0000  ................
+	0x0090:  0000 0000 0000 0000 0000 0000 0000 0000  ................
+	0x00a0:  0000 0000 0000 0000 0000 0000            ............
+21:29:26.420123 IP localhost.45475 > mca38-HP-Pavilion-Desktop-590-p0xxx.domain: 27210+ PTR? 255.255.255.255.in-addr.arpa. (46)
+	0x0000:  0000 0304 0006 0000 0000 0000 0000 0800  ................
+	0x0010:  4500 004a 6f77 4000 4011 cc29 7f00 0001  E..Jow@.@..)....
+	0x0020:  7f00 0101 b1a3 0035 0036 ff49 6a4a 0100  .......5.6.IjJ..
+	0x0030:  0001 0000 0000 0000 0332 3535 0332 3535  .........255.255
+	0x0040:  0332 3535 0332 3535 0769 6e2d 6164 6472  .255.255.in-addr
+	0x0050:  0461 7270 6100 000c 0001                 .arpa.....
+21:29:26.420270 IP 172.20.33.184.44070 > dns.google.domain: 59539+ PTR? 255.255.255.255.in-addr.arpa. (46)
+	0x0000:  0004 0001 0006 f439 092e 8e37 0000 0800  .......9...7....
+	0x0010:  4500 004a 8528 4000 4011 dba2 ac14 21b8  E..J.(@.@.....!.
+	0x0020:  0808 0404 ac26 0035 0036 9ad0 e893 0100  .....&.5.6......
+	0x0030:  0001 0000 0000 0000 0332 3535 0332 3535  .........255.255
+	0x0040:  0332 3535 0332 3535 0769 6e2d 6164 6472  .255.255.in-addr
+	0x0050:  0461 7270 6100 000c 0001                 .arpa.....
+21:29:26.420292 IP 172.20.33.184.44070 > b.resolvers.Level3.net.domain: 59539+ PTR? 255.255.255.255.in-addr.arpa. (46)
+	0x0000:  0004 0001 0006 f439 092e 8e37 0000 0800  .......9...7....
+	0x0010:  4500 004a ac82 4000 4011 ba50 ac14 21b8  E..J..@.@..P..!.
+	0x0020:  0402 0202 ac26 0035 0036 a0d8 e893 0100  .....&.5.6......
+	0x0030:  0001 0000 0000 0000 0332 3535 0332 3535  .........255.255
+	0x0040:  0332 3535 0332 3535 0769 6e2d 6164 6472  .255.255.in-addr
+	0x0050:  0461 7270 6100 000c 0001                 .arpa.....
+21:29:26.420302 IP 172.20.33.184.44070 > 192.168.1.1.domain: 59539+ PTR? 255.255.255.255.in-addr.arpa. (46)
+	0x0000:  0004 0001 0006 f439 092e 8e37 0000 0800  .......9...7....
+	0x0010:  4500 004a 3cb7 4000 4011 6e76 ac14 21b8  E..J<.@.@.nv..!.
+	0x0020:  c0a8 0101 ac26 0035 0036 e532 e893 0100  .....&.5.6.2....
+	0x0030:  0001 0000 0000 0000 0332 3535 0332 3535  .........255.255
+	0x0040:  0332 3535 0332 3535 0769 6e2d 6164 6472  .255.255.in-addr
+	0x0050:  0461 7270 6100 000c 0001                 .arpa.....
+5 packets captured
+41 packets received by filter
+29 packets dropped by kernel
+
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo tcpdump -w file.Pcap -c 5 -i any
+tcpdump: listening on any, link-type LINUX_SLL (Linux cooked), capture size 262144 bytes
+5 packets captured
+38 packets received by filter
+0 packets dropped by kernel

@@ -1,0 +1,90 @@
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ hostname
+mca38-HP-Pavilion-Desktop-590-p0xxx
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ hostname -f
+mca38-HP-Pavilion-Desktop-590-p0xxx
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ hostname -f
+mca38-HP-Pavilion-Desktop-590-p0xxx
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ nslookup google.com
+Server:		127.0.1.1
+Address:	127.0.1.1#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.196.14
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ ping google.com
+PING google.com (142.250.77.142) 56(84) bytes of data.
+64 bytes from maa05s16-in-f14.1e100.net (142.250.77.142): icmp_seq=1 ttl=59 time=19.8 ms
+64 bytes from maa05s16-in-f14.1e100.net (142.250.77.142): icmp_seq=2 ttl=59 time=21.2 ms
+64 bytes from maa05s16-in-f14.1e100.net (142.250.77.142): icmp_seq=3 ttl=59 time=25.5 ms
+64 bytes from maa05s16-in-f14.1e100.net (142.250.77.142): icmp_seq=4 ttl=59 time=20.2 ms
+^C
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 19.876/21.726/25.534/2.261 ms
+
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ ifconfig -a
+enp2s0    Link encap:Ethernet  HWaddr f4:39:09:2e:8e:37  
+          inet addr:172.20.33.184  Bcast:172.20.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::f366:d417:ecc:e98f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:27458 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2288 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4690595 (4.6 MB)  TX bytes:410003 (410.0 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:244 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:244 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:21991 (21.9 KB)  TX bytes:21991 (21.9 KB)
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo ifconfig lo down
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ ifconfig -a
+enp2s0    Link encap:Ethernet  HWaddr f4:39:09:2e:8e:37  
+          inet addr:172.20.33.184  Bcast:172.20.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::f366:d417:ecc:e98f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:34196 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2395 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:5411637 (5.4 MB)  TX bytes:418190 (418.1 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          LOOPBACK  MTU:65536  Metric:1
+          RX packets:244 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:244 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:21991 (21.9 KB)  TX bytes:21991 (21.9 KB)
+
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ sudo ifconfig lo up
+(base) mca38@mca38-HP-Pavilion-Desktop-590-p0xxx:~$ ifconfig -a
+enp2s0    Link encap:Ethernet  HWaddr f4:39:09:2e:8e:37  
+          inet addr:172.20.33.184  Bcast:172.20.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::f366:d417:ecc:e98f/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:35000 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2417 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:5488641 (5.4 MB)  TX bytes:421084 (421.0 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:258 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:258 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:23192 (23.1 KB)  TX bytes:23192 (23.1 KB)
+
+
+
+

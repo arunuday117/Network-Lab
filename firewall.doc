@@ -1,0 +1,16 @@
+sudo apt update
+sudo apt install ufw
+(base) mca11@mca11-HP-Pavilion-Desktop-590-p0xxx:~$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+Apache Full                ALLOW       Anywhere                  
+Apache Full (v6)           ALLOW       Anywhere (v6)             
+
+(base) mca11@mca11-HP-Pavilion-Desktop-590-p0xxx:~$ sudo ufw disable
+Firewall stopped and disabled on system startup
+(base) mca11@mca11-HP-Pavilion-Desktop-590-p0xxx:~$ sudo ufw status
+Status: inactive
+(base) mca11@mca11-HP-Pavilion-Desktop-590-p0xxx:~$ sudo ufw enable
+Firewall is active and enabled on system startup

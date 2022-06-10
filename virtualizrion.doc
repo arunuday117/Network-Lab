@@ -1,0 +1,2 @@
+(base) mca11@mca11-HP-Pavilion-Desktop-590-p0xxx:~$ egrep -c '(vmx|svm)' /proc/cpuinfo
+6
